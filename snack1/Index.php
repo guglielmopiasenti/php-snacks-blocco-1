@@ -58,11 +58,15 @@ $partite = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title></title>
 </head>
 <body>
-    <div container>
-        
+<div class="container">
+        <?php foreach ($partite as $partita): ?>
+            <p>
+                <?= $partita['squadra_casa'] ?> - <?= $partita['squadra_ospite'] ?> | <?= $partita['punti_casa'] ?>-<?= $partita['punti_ospite'] ?>
+            </p>
+        <?php endforeach; ?>
     </div>
 </body>
 </html>
